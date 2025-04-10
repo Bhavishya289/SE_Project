@@ -6,6 +6,7 @@ import Login from "./Components/Login/Login";
 import Search from "./Components/Search/Search";
 import HostelDetails from "./Components/HostelDetails/HostelDetails";
 import Footer from "./Components/Footer/Footer";
+import Chatbot from './Components/Chatbot';
 
 const MoreButton = () => {
   const svgContent = `
@@ -215,6 +216,7 @@ const Home = () => {
       </section>
 
       <Footer/>
+      <Chatbot />
     </div>
   );
 };

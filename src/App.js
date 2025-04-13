@@ -8,53 +8,30 @@ import HostelDetails from "./Components/HostelDetails/HostelDetails";
 import Footer from "./Components/Footer/Footer";
 import Chatbot from './Components/Chatbot';
 
-const MoreButton = () => {
-  const svgContent = `
-    <svg
-      width="50px"
-      height="20px"
-      viewBox="0 0 66 43"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <g
-        id="arrow"
-        stroke="none"
-        stroke-width="1"
-        fill="none"
-        fill-rule="evenodd"
-      >
-        <path
-          class="two"
-          d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
-          fill="#FFFFFF"
-        ></path>
-        <path
-          class="three"
-          d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
-          fill="#FFFFFF"
-        ></path>
-      </g>
-    </svg>
-  `;
-
+const RatedHostel = () => {
   return (
-    <button className="cta">
-      <span className="span">More</span>
-      <span
-        className="second"
-        dangerouslySetInnerHTML={{ __html: svgContent }}
-      ></span>
-    </button>
+    <div className="rated-hostel-container">
+      <h3 className="elegant-title">
+        <span className="letter-container">
+          <span className="letter-t">T</span>
+          <span className="letter-rest">op</span>
+        </span>
+        <span className="letter-container">
+          <span className="letter-t">R</span>
+          <span className="letter-rest">ated</span>
+        </span>
+        <span className="letter-rest"> Hostels</span>
+      </h3>
+    </div>
   );
 };
+
 
 const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector('.navbar');
-      if (navbar) {  // Add null check
+      if (navbar) {
         if (window.scrollY > 10) {
           navbar.classList.add('scrolled');
         } else {
@@ -154,19 +131,31 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="features-section">
-        <h2>Why Choose UNIHOSTEL?</h2>
-        <div className="features">
-          <div className="feature-item">Hostels reviewed by students</div>
-          <div className="feature-item">Best hostels</div>
-          <div className="feature-item">Find every frame of hostel</div>
-        </div>
-      </section>
+  <h2 className="features-title">Why Choose UNIHOSTEL?</h2>
+  <div className="features-container">
+    <div className="feature-item">
+      <div className="feature-icon">🏆</div>
+      <div className="feature-text">Hostels reviewed by students</div>
+      <div className="feature-underline"></div>
+    </div>
+    <div className="feature-item">
+      <div className="feature-icon">⭐</div>
+      <div className="feature-text">Best hostels</div>
+      <div className="feature-underline"></div>
+    </div>
+    <div className="feature-item">
+      <div className="feature-icon">📸</div>
+      <div className="feature-text">Find every frame of hostel</div>
+      <div className="feature-underline"></div>
+    </div>
+  </div>
+</section>
 
       {/* Hostel Showcase Section */}
       <section className="hostel-showcase">
         <div className="hostel-showcase-up">
           <span>
-            <MoreButton/>
+            <RatedHostel/>
           </span>
         </div>
         <div className="hostels-container">
@@ -179,12 +168,14 @@ const Home = () => {
                     state={{ hostel }}
                     className="card-link-wrapper"
                   >
+                    <div className="card-image-wrapper">
                     <img className="card-image" src={hostel.image} alt={hostel.name} />
+                    </div>
                     <div className="card-content">
                       <h3 className="hostel-name">{hostel.name}</h3>
                       <div className="facilities">
-                        {hostel.facilities.map((facility, i) => (
-                          <span key={i} className="facility">
+                        {hostel.facilities.slice(0, 6).map((facility, i) => (
+                          <span key={i} className="facility" data-facility={facility}>
                             {facility}
                           </span>
                         ))}
@@ -198,42 +189,198 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <h2>What Our Students Say</h2>
-        <div className="testimonials">
-          <div className="testimonial">
-            <img src="/assets/image_1.jpeg" alt="Customer 1" />
-            <p>"UNIHOSTEL is a good website to see review of a hostel. Highly recommend!"</p>
-            <span>- Stark</span>
-          </div>
-          <div className="testimonial">
-            <img src="/assets/image_2.jpeg" alt="Customer 2" />
-            <p>"I live in a polluted city, and UNIHOSTEL help me to find good hostel at unknown place."</p>
-            <span>- Ciri</span>
-          </div>
-        </div>
-      </section>
-
+      <Chatbot/>
       <Footer/>
-      <Chatbot />
     </div>
   );
 };
 
-const About = () => (
-  <div className="nav_cont">
-    <h2 className="subtitle">About UniHostel</h2>
-    <p className="description">A revolutionary product that helps detoxify lungs naturally.</p>
-  </div>
-);
+const About = () => {
+  return (
+    <div className="about-container">
+      <div className="about-content">
+        <h2 className="about-title">
+          <span className="title-part">About</span>
+          <span className="title-part">UniHostel</span>
+        </h2>
+        
+        <div className="about-card">
+          <div className="card-content">
+            <div className="icon-wrapper">
+              <div className="about-icon">🏠</div>
+            </div>
+            <p className="about-description">
+              A revolutionary platform connecting students with the <span className="highlight">best hostels</span> 
+              near their universities. Our verified reviews and comprehensive listings help you find your 
+              <span className="highlight"> perfect home away from home</span>.
+            </p>
+          </div>
+          
+          <div className="features-grid">
+            <div className="feature-2">
+              <div className="feature-icon-2">⭐</div>
+              <p>Student-reviewed accommodations</p>
+            </div>
+            <div className="feature-2">
+              <div className="feature-icon-2">📊</div>
+              <p>Detailed ratings system</p>
+            </div>
+            <div className="feature-2">
+              <div className="feature-icon-2">📍</div>
+              <p>Prime locations near campuses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-const Contact = () => (
-  <div className="nav_cont">
-    <h2 className="subtitle">Contact Us</h2>
-    <p className="description">Email: contact@gmail.com</p>
-  </div>
-);
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3000);
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  return (
+    <motion.div 
+      className="contact-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="contact-content">
+        <motion.h2 
+          className="contact-title"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          Get in <span className="highlight">Touch</span>
+        </motion.h2>
+
+        <div className="contact-grid">
+          <motion.div 
+            className="contact-info"
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
+            <div className="info-item">
+              <div className="info-icon">📧</div>
+              <div>
+                <h3>Email Us</h3>
+                <p>contact@unihostel.com</p>
+              </div>
+            </div>
+            
+            <div className="info-item">
+              <div className="info-icon">📱</div>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 (123) 456-7890</p>
+              </div>
+            </div>
+            
+            <div className="info-item">
+              <div className="info-icon">📍</div>
+              <div>
+                <h3>Visit Us</h3>
+                <p>123 Campus Lane, University Town</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="contact-form-container"
+            initial={{ x: 30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
+            {isSubmitted ? (
+              <motion.div 
+                className="success-message"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+              >
+                <div className="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>We'll get back to you soon.</p>
+              </motion.div>
+            ) : (
+              <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label htmlFor="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+                </div>
+                
+                <motion.button
+                  type="submit"
+                  className="submit-btn"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Send Message
+                </motion.button>
+              </form>
+            )}
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 
 const App = () => (
   <Router>

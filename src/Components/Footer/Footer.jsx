@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import "./Footer.css";
 
 const Footer = () => {
@@ -21,7 +21,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>UNIHOSTEL</h2>
+          <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>BUNK BUDDIES</h2>
           <p style={{ maxWidth: '600px', margin: '0 auto 1.5rem' }}>
             Your trusted platform for finding the perfect hostel experience. 
             We connect students with quality accommodations across the country.
@@ -94,7 +94,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3 style={{ marginBottom: '1rem' }}>Subscribe to our newsletter</h3>
+          <h3 style={{ marginBottom: '1rem' }}>Subscribe US</h3>
           <form className="newsletter-form">
             <input 
               type="email" 
@@ -111,7 +111,7 @@ const Footer = () => {
         <div className="social-links">
           <motion.a
             href="#"
-            className="social-icon"
+            className="social-icon_f"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -123,7 +123,7 @@ const Footer = () => {
           </motion.a>
           <motion.a
             href="#"
-            className="social-icon"
+            className="social-icon_t"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -135,7 +135,7 @@ const Footer = () => {
           </motion.a>
           <motion.a
             href="#"
-            className="social-icon"
+            className="social-icon_i"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -147,7 +147,7 @@ const Footer = () => {
           </motion.a>
           <motion.a
             href="#"
-            className="social-icon"
+            className="social-icon_l"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -157,10 +157,22 @@ const Footer = () => {
           >
             <FaLinkedinIn size={20} />
           </motion.a>
+          <motion.a
+            href="#"
+            className="social-icon_w"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <FaWhatsapp size={20} />
+          </motion.a>
         </div>
 
         <div className="copyright">
-          &copy; {new Date().getFullYear()} UNIHOSTEL. All rights reserved.
+          &copy; {new Date().getFullYear()} BUNK BUDDIES. All rights reserved.
         </div>
       </div>
     </footer>

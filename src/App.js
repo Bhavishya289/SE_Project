@@ -131,7 +131,11 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="features-section">
+<<<<<<< HEAD
   <h2 className="features-title">Why Choose BUNK BUDDIES?</h2>
+=======
+  <h2 className="features-title">Why Choose UNIHOSTEL?</h2>
+>>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
   <div className="features-container">
     <div className="feature-item">
       <div className="feature-icon">🏆</div>
@@ -201,7 +205,11 @@ const About = () => {
       <div className="about-content">
         <h2 className="about-title">
           <span className="title-part">About</span>
+<<<<<<< HEAD
           <span className="title-part">BUNK BUDDIES</span>
+=======
+          <span className="title-part">UniHostel</span>
+>>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
         </h2>
         
         <div className="about-card">
@@ -289,7 +297,11 @@ const Contact = () => {
               <div className="info-icon">📧</div>
               <div>
                 <h3>Email Us</h3>
+<<<<<<< HEAD
                 <p>contact@bunkbuddies.com</p>
+=======
+                <p>contact@unihostel.com</p>
+>>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
               </div>
             </div>
             

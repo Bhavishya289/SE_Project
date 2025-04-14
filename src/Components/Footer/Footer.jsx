@@ -94,7 +94,11 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           <h3 style={{ marginBottom: '1rem' }}>Subscribe US</h3>
+=======
+          <h3 style={{ marginBottom: '1rem' }}>Subscribe to Website</h3>
+>>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
           <form className="newsletter-form">
             <input 
               type="email" 

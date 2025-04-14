@@ -477,9 +477,5 @@ input[type="text"]:focus {
 }
 
 .hostel-main-image.image-loading {
-  opacity: 0.7;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
+  opacity: 0.7;}
+

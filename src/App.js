@@ -6,7 +6,8 @@ import Login from "./Components/Login/Login";
 import Search from "./Components/Search/Search";
 import HostelDetails from "./Components/HostelDetails/HostelDetails";
 import Footer from "./Components/Footer/Footer";
-import Chatbot from './Components/Chatbot';
+import ChatbotButton from "./Components/Support/ChatbotButton";
+import Chatbot from "./Components/Support/Chatbot";
 
 const RatedHostel = () => {
   return (
@@ -131,29 +132,25 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="features-section">
-<<<<<<< HEAD
-  <h2 className="features-title">Why Choose BUNK BUDDIES?</h2>
-=======
-  <h2 className="features-title">Why Choose UNIHOSTEL?</h2>
->>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
-  <div className="features-container">
-    <div className="feature-item">
-      <div className="feature-icon">🏆</div>
-      <div className="feature-text">Hostels reviewed by students</div>
-      <div className="feature-underline"></div>
-    </div>
-    <div className="feature-item">
-      <div className="feature-icon">⭐</div>
-      <div className="feature-text">Best hostels</div>
-      <div className="feature-underline"></div>
-    </div>
-    <div className="feature-item">
-      <div className="feature-icon">📸</div>
-      <div className="feature-text">Find every frame of hostel</div>
-      <div className="feature-underline"></div>
-    </div>
-  </div>
-</section>
+        <h2 className="features-title">Why Choose BUNK BUDDIES?</h2>
+        <div className="features-container">
+          <div className="feature-item">
+            <div className="feature-icon">🏆</div>
+            <div className="feature-text">Hostels reviewed by students</div>
+            <div className="feature-underline"></div>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">⭐</div>
+            <div className="feature-text">Best hostels</div>
+            <div className="feature-underline"></div>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">📸</div>
+            <div className="feature-text">Find every frame of hostel</div>
+            <div className="feature-underline"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Hostel Showcase Section */}
       <section className="hostel-showcase">
@@ -193,7 +190,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Chatbot/>
+      <ChatbotButton/>
       <Footer/>
     </div>
   );
@@ -204,12 +201,8 @@ const About = () => {
     <div className="about-container">
       <div className="about-content">
         <h2 className="about-title">
-          <span className="title-part">About</span>
-<<<<<<< HEAD
-          <span className="title-part">BUNK BUDDIES</span>
-=======
-          <span className="title-part">UniHostel</span>
->>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
+        <span className="title-part">About</span>
+        <span className="title-part">BUNK BUDDIES</span>
         </h2>
         
         <div className="about-card">
@@ -296,12 +289,8 @@ const Contact = () => {
             <div className="info-item">
               <div className="info-icon">📧</div>
               <div>
-                <h3>Email Us</h3>
-<<<<<<< HEAD
-                <p>contact@bunkbuddies.com</p>
-=======
-                <p>contact@unihostel.com</p>
->>>>>>> de54b9d63d9b5c66a873ee93506fd79b43f0cd46
+              <h3>Email Us</h3>
+              <p>contact@bunkbuddies.com</p>
               </div>
             </div>
             
@@ -402,6 +391,7 @@ const App = () => (
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
       <Route path="/hostel/:id" element={<HostelDetails />} />
+      <Route path="/chatbot" element={<Chatbot />} />
     </Routes>
   </Router>
 );

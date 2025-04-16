@@ -10,7 +10,7 @@ const questions = [
   {
     id: 2,
     question: "Which hostels are budget-friendly?",
-    answer: "We have several budget-friendly options starting from ₹5000/month. You can use our price filter to see hostels within your budget range."
+    answer: "We have several budget-friendly options starting from ₹16000/month. You can use our price filter to see hostels within your budget range."
   },
   {
     id: 3,
